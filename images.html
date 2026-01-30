@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Yadav | Personal Webpage</title>
+
+    <!-- Basic HTML meta tags -->
+    <meta name="description" content="Personal webpage using basic HTML tags">
+    <meta name="author" content="Aryan Yadav">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ef3131;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        img {
+            border-radius: 12px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #444;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Shobit Saroj</h1>
+        <h2>Computer Science Student</h2>
+    </header>
+
+    <!-- PROFILE SECTION -->
+    <section>
+        <h3>My Profile</h3>
+
+        <!-- Profile picture linked to LinkedIn -->
+        <!-- Save your attached photo as profile.jpg in the same folder -->
+        <a href="www.linkedin.com/in/shobit-saroj-57b602399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+            <a href="www.linkedin.com/in/shobit-saroj-57b602399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+        <img src="Shobit.jpg" alt="Shobit Saroj Profile Photo" width="200">
+    </a>
+        </a>
+
+        <p>
+            Hello! My name is <b>Shobit Saroj</b>. I am a <i>Computer Science</i> student.
+            I enjoy <u>coding</u>, learning new technologies, and building web applications.
+        </p>
+    </section>
+
+    <!-- LIST SECTION -->
+    <section>
+        <h3>My Skills</h3>
+
+        <!-- Ordered List -->
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>C++</li>
+        </ol>
+
+        <!-- Unordered List -->
+        <ul>
+            <li>Problem Solving</li>
+            <li>Teamwork</li>
+            <li>Communication</li>
+        </ul>
+    </section>
+
+    <!-- TABLE SECTION -->
+    <section>
+        <h3>College Details</h3>
+
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Website</th>
+            </tr>
+            <tr>
+                <td>ITM Skills University</td>
+                <td>
+                    <a href="https://www.isu.ac.in/" target="_blank">Visit College Website</a>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section>
+        <h3>Ask Me a Question</h3>
+
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="question">Your Question:</label><br>
+            <textarea id="question" name="question" rows="4" cols="40"></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Shobit Saroj | HTML Assignment</p>
+    </footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Images Page</title>
+</head>
+
+<body>
+
+
+    <!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Images Page</title>
+</head>
+
+<body>
+
+    <h3>Listen to My Introduction</h3>
+
+    <button onclick="playVoice()">▶ Play Voice</button>
+
+    <br><br>
+
+    <audio id="voice">
+        <source src="intro.ogg" type="audio/ogg">
+        Your browser does not support audio.
+    </audio>
+
+    <script>
+        function playVoice() {
+            const audio = document.getElementById("voice");
+            audio.play().catch(err => {
+                alert("Audio could not play. Check file format or browser settings.");
+                console.error(err);
+            });
+        }
+    </script>
+
+</body>
+</html>

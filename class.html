@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Urban Coffee</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #faf7f2;
+            color: #3a2c24;
+        }
+
+        /* TOP BAR */
+        .topbar {
+            background-color: #4b2e2e;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* BANNER */
+        .banner {
+            background-image: url("https://images.unsplash.com/photo-1511920170033-f8396924c348");
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .banner-text {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 20px;
+            width: 320px;
+            border-radius: 8px;
+        }
+
+        /* CONTENT */
+        .content {
+            padding: 60px 40px;
+        }
+
+        .row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            flex: 1;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        /* ☕ MENU SECTION */
+        .menu-section {
+            padding: 70px 40px;
+            background-image: url("https://images.unsplash.com/photo-1521305916504-4a1121188589");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .menu-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                rgba(250,247,242,0.95),
+                rgba(250,247,242,0.85)
+            );
+        }
+
+        .menu-section h2 {
+            position: relative;
+            text-align: center;
+            font-size: 34px;
+            color: #4b2e2e;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+
+        .menu-wrapper {
+            position: relative;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .menu-image img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            filter: contrast(1.05) saturate(1.1);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .menu-card {
+            background: rgba(255, 250, 245, 0.85);
+            backdrop-filter: blur(6px);
+            padding: 26px;
+            border-radius: 16px;
+            border-left: 6px solid #c19a6b;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+            transition: all 0.3s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+        }
+
+        .menu-card h3 {
+            margin-bottom: 15px;
+            color: #6f4e37;
+            font-size: 20px;
+        }
+
+        .menu-card p {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .menu-card span {
+            font-weight: 600;
+            color: #6f4e37;
+        }
+
+        .order-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 40px;
+            background: #6f4e37;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #4b2e2e;
+            transform: scale(1.05);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #4b2e2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .menu-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-image img {
+                height: 300px;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .banner-text {
+                left: 20px;
+                right: 20px;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="topbar">
+    <strong>☕ Urban Coffee</strong>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<!-- BANNER -->
+<section class="banner">
+    <div class="banner-text">
+        <h2>Fresh Coffee Daily</h2>
+        <p>Crafted with love and premium beans.</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<div class="content">
+    <div class="row">
+        <div class="card">
+            <h3>About Us</h3>
+            <p>
+                Urban Coffee is a cozy café serving handcrafted coffee,
+                refreshing tea, and freshly baked items.
+            </p>
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+        </div>
+
+        <div class="card">
+            <h3>Why Choose Us</h3>
+            <ul>
+                <li>✔ Premium Quality Beans</li>
+                <li>✔ Skilled Baristas</li>
+                <li>✔ Fresh Bakery Items</li>
+            </ul>
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+        </div>
+    </div>
+</div>
+
+<!-- ☕ MENU -->
+<section class="menu-section">
+    <h2>Our Menu</h2>
+
+    <div class="menu-wrapper">
+
+        <div class="menu-image">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c" alt="Latte Coffee">
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>☕ Coffee</h3>
+                <p>Espresso <span>₹120</span></p>
+                <p>Latte <span>₹150</span></p>
+                <p>Mocha <span>₹170</span></p>
+            </div>
+
+            <div class="menu-card">
+                <h3>🍵 Tea</h3>
+                <p>Masala Tea <span>₹60</span></p>
+                <p>Green Tea <span>₹80</span></p>
+                <p>Lemon Tea <span>₹70</span></p>
+            </div>
+
+            <div class="menu-card">
+                <h3>🥐 Bakery</h3>
+                <p>Brownie <span>₹90</span></p>
+                <p>Croissant <span>₹110</span></p>
+                <p>Muffin <span>₹85</span></p>
+            </div>
+
+            <div style="text-align:center;">
+                <a href="#" class="order-btn">Order Now ☕</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2022 Urban Coffee. All rights reserved.
+</footer>
+
+</body>
+</html>
